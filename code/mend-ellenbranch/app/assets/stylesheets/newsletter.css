@@ -1,0 +1,72 @@
+/* NEWSLETTER SUBSCRIPTION */
+
+ .newsletter-wrap {
+  font-family: 'lato', sans-serif;
+  text-transform: uppercase;
+  background-color: #D7DDE0;
+  color: #5A5E68;
+  border: solid; 
+  border-width: 5px;
+  border-color: #f7f7f7;
+  text-align: left;
+  margin-top: 10px;
+  padding-top: 20px; 
+  padding-bottom: 0px;
+}
+
+#on-the-mend {
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+#on-the-mend h1 {
+  font-family: "lato";
+  font-size: 28px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: white;
+}
+
+
+div#signup-message {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+div#signup-message p {
+  font-size: 16px;
+  font-style: bold;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#newsletter-form-fields {
+  padding-top: 25px;
+  padding-bottom: 5px;
+}
+
+#email-input {
+  font-family: "lato";
+  text-transform: uppercase;
+  border: solid;
+  border-color: #5A5E68;
+}
+
+#newsletter-button {
+  color:#5A5E68;
+  border: solid;
+  background: none;
+  border-color:#5A5E68;
+  font-family: "lato";
+  font-size: 14px;
+  font-style: normal;
+  text-transform: uppercase;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+#error {
+  color: red;
+}

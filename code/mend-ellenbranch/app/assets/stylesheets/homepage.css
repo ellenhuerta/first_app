@@ -1,0 +1,9 @@
+/* MOOD QUESTION */
+
+#mood-question h1 {
+  font-family: "Lato";
+  color: #5A5E68;
+  font-size: 24px;
+  border-bottom: solid;
+  border-bottom-color: #f7f7f7;
+}

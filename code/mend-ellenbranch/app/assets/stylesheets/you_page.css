@@ -1,0 +1,50 @@
+/*YOU PAGE*/
+
+.youbox{
+  width: 300px;
+  height: 150px;
+  border: solid;
+  font-size: 30px;
+  margin-top: 50px;
+}
+
+.youbox p{
+  text-align: left;
+  font-size: 24px;
+  font-family: "lato";
+  line-height: 0.4;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.sharestorytext {
+  color: black;
+  font-size: 16px;
+  text-align: justify;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 50px;
+}
+
+.shareadvicetext {
+  color: black;
+  font-size: 16px;
+  text-align: justify;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 50px;
+}
+
+.submitbutton {
+  margin-top: 30px;
+
+}
+
+.submitbutton a {
+  color: black;
+  font-family: "lato";
+  width: 300px;
+  height: 150px;
+  border: solid;
+  padding: 10px;
+}

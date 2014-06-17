@@ -1,0 +1,30 @@
+en:
+  refinery:
+    plugins:
+      writers:
+        title: Writers
+    writers:
+      admin:
+        writers:
+          actions:
+            create_new: Add New Writer
+            reorder: Reorder Writers
+            reorder_done: Done Reordering Writers
+          records:
+            title: Writers
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Writers yet. Click "Add New Writer" to add your first writer.
+          writer:
+            view_live_html: View this writer live <br/><em>(opens in a new window)</em>
+            edit: Edit this writer
+            delete: Remove this writer forever
+      writers:
+        show:
+          other: Other Writers
+  activerecord:
+    attributes:
+      'refinery/writers/writer':
+        name: Name
+        bio: Bio
+        web_url: Web Url
+        photo: Photo

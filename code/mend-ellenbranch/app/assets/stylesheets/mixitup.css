@@ -1,0 +1,65 @@
+#Container .mix{
+  display: none;
+}
+
+.container .fail-message{
+  display:none;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.container.fail .fail-message{
+  display:inline-block;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.container .fail-message:before{
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.container .fail-message span{
+  display: inline-block;
+  font-weight: 500;
+  color: black;
+  font-size: 16px;
+  vertical-align: middle;
+  font-family: "source sans pro";
+}
+
+button{
+  font-family: "lato";
+  display: inline-block;
+  padding: .4em .8em;
+  background: #f7f7f7;
+  border: solid;
+  color: #5A5E68;
+  font-size: 14px;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+button:hover {
+	background: #5A5E68;
+}
+button:focus{
+  outline: 0 none;
+  background: white;
+  border: solid;
+  color: #5A5E68;
+  border-color: white;
+}
+
+button.active{
+  background: #5A5E68;
+  color: white;
+}
+
+.row button.filter{
+  margin-bottom: 20px;
+}
+

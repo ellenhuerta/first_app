@@ -1,0 +1,32 @@
+zh-CN:
+  refinery:
+    plugins:
+      writers:
+        title: Writers
+    writers:
+      admin:
+        writers:
+          actions:
+            create_new: 建立新的 Writer
+            reorder: 对 Writers 重新排序
+            reorder_done: 对 Writers 的重新排序结束
+          records:
+            title: Writers
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Writers yet. Click "Add New Writer" to add your first writer.
+            no_items_yet: 目前没有 Writers . 点击 "Add New Writer" 创建一个writer.
+          writer:
+            view_live_html: 查看 writer 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 writer
+            delete: 永久删除 writer
+      writers:
+        show:
+          other: 其他 Writers
+  activerecord:
+    attributes:
+      'refinery/writers/writer':
+        name: Name
+        bio: Bio
+        web_url: Web Url
+        photo: Photo

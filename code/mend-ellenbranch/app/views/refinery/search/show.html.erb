@@ -1,0 +1,22 @@
+
+<% content_for :body_content_title do %>
+  <%= t('.search_results_for', :what => params[:query]) %>
+<% end %>
+
+
+  <% if @results.empty? %>
+    <%= t('.no_results_for', :what => params[:query]) %>
+  <% else %>
+    <div class="row">
+      <div class="large-12 columns">
+        <ul class="clearing-thumbs small-block-grid-1 medium-block-grid-2 large-block-grid-3 container"  id="Container">
+         <%= render :partial => "/refinery/blog/shared/home_page_post", :collection => @results, as: :post %>
+        </ul>
+      </div>
+    </div>
+<% end %>
+
+
+
+
+<%#= render "/refinery/content_page" %>

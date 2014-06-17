@@ -1,0 +1,92 @@
+/*HEADER SECTION*/
+.posts header{
+  position: relative;
+  overflow: hidden;
+  filter: brightness(90%) sepia(30%) ;
+  -webkit-filter: brightness(90%)  sepia(30%);
+  -moz-filter: brightness(90%) sepia(30%);
+  -o-filter: brightness(90%)  sepia(30%);
+  -ms-filter: brightness(90%) sepia(30%);     
+}
+
+.posts header {
+  height: calc(100% - 3em);
+  position: relative;
+  overflow: hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: brightness(90%) sepia(30%) ;
+  -webkit-filter: brightness(90%)  sepia(30%);
+  -moz-filter: brightness(90%) sepia(30%);
+  -o-filter: brightness(90%)  sepia(30%);
+  -ms-filter: brightness(90%) sepia(30%);   
+}
+
+.posts header h1 {
+  font-family: 'Bitter';
+  color: white;
+  z-index: 1; 
+}
+
+.posts header h2 {
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  text-transform: uppercase;
+  margin: -.5em;
+  z-index: 1; 
+}
+
+.posts header hgroup {
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  text-align: center;
+  position: absolute;
+  bottom: -3%;
+  left: 50% ;
+  color: #fff;
+  border: 5px solid #fff;
+  padding: .5em 3em 1em ;
+  background-color: rgba(0, 0, 0, 0.05);
+  z-index: 1; 
+}
+
+.posts .blog_post{
+  margin-bottom: 100px; 
+}
+
+.posts .blog_post h1 {
+  font-family: 'bitter';
+  text-shadow: 0 2px 0 rgba(198,198, 198, .9);
+  text-redering: optimizeLegibillity;
+  -moz-font-feature-settings: "dlig";
+  color: rgb(30,30,30);
+}
+
+.posts .blog_post p {
+  font-family:  "Source Sans Pro", "georgia", "source sans pro";
+  font-size: 20px;
+  width: 80%;
+}
+
+.posts .blog_post h1 {
+  font-family: 'bitter';
+  text-shadow: 0 2px 0 rgba(198,198, 198, .9);
+  text-redering: optimizeLegibillity;
+  -moz-font-feature-settings: "dlig";
+  color: rgb(30,30,30);
+}
+
+
+#related-posts {
+  margin-top: 5%;
+
+}
+
+#related-posts h1 {
+  color: grey;
+}

@@ -1,0 +1,12 @@
+<%= form_tag refinery.search_path, class: 'searchbox' do -%>
+  <div class="row collapse">
+    <div class="small-12 columns">
+      <%= search_field_tag :query, {}, {:type => "search",
+                   :placeholder => "Search...", :class => "searchbox-input", :onkeyup => "buttonUp();",
+                   :value => (params[:query] if params[:query])} %>
+       <%= submit_tag 'GO', class: "searchbox-submit button" %>
+       <i class="fi-magnifying-glass searchbox-icon size-30"></i>
+    </div>
+  </div>
+<% end %>
+

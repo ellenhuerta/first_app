@@ -1,0 +1,44 @@
+<% if post.live?  %>
+  <%unless (image = post.image).nil?  %> 
+
+<style>
+ <%="#post_#{post.id}"%> {
+    background: url(<%=image.url%>);
+    width: 100%;
+    height: 300px;
+    /*background-size: 100%;*/
+    background-repeat:no-repeat;
+    background-position:center;
+    
+  }
+</style>
+
+    <li class="mix <%=post.tag_list.join(" ").downcase %> <%=post.emotion_list.join(" ").downcase %>">
+      <!-- BACKGROUND IMAGE -->
+      <figure  class="thumb-img" id=<%="post_#{post.id}"%> data-clearing>
+        <a href="<%=image.url%>">  
+          <figcaption class="item-description">
+            <h2><%= post.title.html_safe %></h2>
+          </figcaption>   
+        </a>
+        <!-- COMMENTS -->
+        <aside id="social-like-comments">
+          <span>
+           <a href=<%=refinery.blog_post_path(post) + '#disqus_thread'%>  data-disqus-identifier class="fi-comment size-20"></a></span>
+        </aside>
+        <!-- OVERLAY -->
+        <a class="item-link" href=<%=refinery.blog_post_path(post)%> >
+          <div class="overlay-mask"></div>
+        </a>
+        <% if post.is_video %>
+        <a class="item-link" href=<%=refinery.blog_post_path(post)%> >
+          <i class="fi-play-video size-70" id="video-icon"/></i>
+        </a>
+        <% end %>
+      </figure>
+    </li>
+  <% end %>
+<% end %>
+
+
+

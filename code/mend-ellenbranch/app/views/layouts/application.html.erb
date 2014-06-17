@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<%= render "/refinery/html_tag" %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <head>
+
+    <%= render "/refinery/head" %>
+    <%= render "/refinery/javascripts" %>
+  
+<script type="text/javascript">
+  $(function(){ $(document).foundation(); });
+         
+  $(document).foundation({
+    offcanvas : {
+      close_on_click : true,
+    }
+  });
+</script>
+
+
+</head>
+
+
+  <%= site_bar -%>
+<div class="main-wrapper">
+  <!-- OFF CANVAS SECTIONS WRAPPING THE MAIN CONTENT -->
+  <div id="is_open" class="off-canvas-wrap">
+    <div class="inner-wrap">
+      <!-- OFF CANVAS MENU BAR -->
+      <nav class="tab-bar">  
+        <!-- TODO: MOVE CSS FOR MENU -->
+        <section class="right-small">
+           <a class="right-off-canvas-toggle" href="#"><i class="fi-align-justify size-50"></i><span style="position:absolute; bottom:-27px; left:0;font-size:14px;">menu</span></a>
+        </section>
+        <!-- TODO: MOVE TO CSS -->
+        <a href="/"><img src='http://i.imgur.com/WTF0HId.png' style="max-height:25px; padding-left: 10px;"></a>
+      </nav> 
+
+        
+      <!-- OFF CANVAS MENU BAR -->
+      <aside class="right-off-canvas-menu">
+        <ul class="off-canvas-list">
+          <li class="active"><a href="/" class="nav section">
+            <span>Home</span></a>
+          <li class="active"><a href="/categories/stories" class="nav section" >
+            <span>Stories</span></a>
+          </li>
+          <li>
+            <a href="/categories/advice" class="nav section">
+            <span>Advice</span></a>
+          </li>
+          <li>
+            <a href="/tools" class="nav section" >
+            <span>Tools</span></a>
+          </li>
+          <li>
+            <a href="/you" class="company info">
+            <span>Write For Us</span></a>
+          </li>
+          <li>
+            <a href="/privacy" class="company info">
+            <span>Privacy Policy</span></a>
+          </li>
+          <li>
+            <a href="/terms" class="company info">
+            <span>Terms of Use</span></a>
+          </li>
+          <li>
+            <a href="/about" class="company info">
+            <span>About Mend</span></a>
+          </li>
+          <li>
+            <a href="/gethelp" class="company info">
+            <span>Get Help</span></a>
+          </li>
+        </ul>
+        <div class= "aboutsocial">
+          <a href="http://twitter.com/letsmend"><i class="fi-social-twitter size-16"></i></a>
+          <a href="http://instagram.com/letsmend"><i class="fi-social-instagram"></i></a>
+          <a href="http://youtube.com/letsmend"><i class="fi-social-youtube"></i></a>
+          <a href="http://facebook.com/letsmend"><i class="fi-social-facebook"></i></a>
+        </div>
+        <div class= "copyright">© 2014 Mend, Inc.
+        </div>
+      </aside> 
+
+      <!-- MANTRA & SEARCH -->
+      <div id="mantra-search" >
+        
+          <%= render 'layouts/search' %>
+
+          <div class="large-12">
+          <section class="mantra">
+            <p>Your guide to mending and thriving after heartbreak.</p>  
+          </section>
+        </div> 
+      </div>
+
+      <!-- MAIN SECTION -->
+      <section class="main-section">
+          <div class="row">
+            <div class="large-12 columns">
+              <!-- YIELD -->
+              <%= yield %> 
+            </div>
+          </div> 
+      </section>
+      
+      <!-- CLOSE THE OFF-CANVAS MENU -->
+      <a class="exit-off-canvas"></a>
+      
+    </div>
+  </div>
+</div>
+<script src="assets/owl.carousel.js"></script>
+
+

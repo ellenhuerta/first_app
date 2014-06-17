@@ -1,0 +1,147 @@
+/*Posts*/
+figure {
+  position: relative;
+  width: 100%;
+}
+
+.thumb-img {
+  margin-top: 0;
+}
+
+.thumb-img img {  
+  transition: filter 250ms ease-out 0s;
+    transition-property: filter;
+    transition-duration: 250ms;
+    transition-timing-function: ease-out;
+    transition-delay: 0s;
+}
+
+/*styling for caption of "how are you feeling?" posts*/
+
+figcaption {
+  position: absolute;
+  bottom: 30%;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  padding: 2.5em 0.71429em 0.37143em .6em;
+
+  }
+
+figcaption h2{
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0;
+  }
+
+.item-description{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  transition: background 250ms ease-out 0s;
+  font-family: "bitter";
+  color: white;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(rgba(0, 0, 0, 0.7)));
+  background: -webkit-linear-gradient(center top, transparent, rgba(0, 0, 0, 0.7));
+  background: -moz-linear-gradient(center top, transparent, rgba(0, 0, 0, 0.7));
+  background: -o-linear-gradient(center top, transparent, rgba(0, 0, 0, 0.7));
+  background: linear-gradient(center top, transparent, rgba(0, 0, 0, 0.7)) repeat scroll 0% 0% transparent;
+ }
+
+/*styling for overlay on each post thumbnail*/
+.overlay-mask {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.1);
+        background-color: rgba(255,255,255, 0.2);
+        background-image: none;
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-position: 0% 0%;
+        background-clip: border-box;
+        background-origin: padding-box;
+        background-size: auto auto;
+    opacity: .5;
+    transition: opacity 250ms ease-out 0s;
+        transition-property: opacity;
+        transition-duration: 250ms;
+        transition-timing-function: ease-out;
+        transition-delay: 0s;
+}
+
+.item-link:hover .overlay-mask{
+  opacity: 1;
+  }
+
+/* COMMENT ICON */
+#social-like-comments {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  display: none;
+}
+
+figure:hover #social-like-comments {
+  display: block;
+  z-index: 100;
+}
+
+
+#social-like-comments span{
+  font-family: 'lato';
+  text-transform: uppercase;
+  font-size: 8px;
+  font-weight: bold;
+}
+
+#social-like-comments a {
+  color: white;
+  padding: 10px;
+}
+
+/* LOAD MORE BUTTON */
+.load-more-btn {
+  color: #5A5E68;
+  border: solid;
+  background: #D7DDE0;
+  border-color:#5A5E68;
+  font-family: "lato";
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.load-more-btn:hover {
+  /*outline: 0 none;*/
+  background: white;
+  border: solid;
+  color: #5A5E68;
+  border-color:#5A5E68;
+  
+}
+.load-more-btn:active {
+  position:relative;
+  top:1px;
+}
+
+/*VIDEO ICON*/
+#video-icon{ 
+  color: rgb(196, 192, 192); 
+  position:absolute; 
+  top: 50%; 
+  left: 50%; 
+  margin-left: -33px; 
+  margin-top: -34px;
+}
+
+

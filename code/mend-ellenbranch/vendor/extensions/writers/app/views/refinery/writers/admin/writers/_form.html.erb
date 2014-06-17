@@ -1,0 +1,44 @@
+<%= form_for [refinery, :writers_admin, @writer] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @writer,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :bio -%>
+    <%= f.text_area :bio, size: "60x10" -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :web_url -%>
+    <span>http://</span> <%= f.text_field :web_url -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :twitter_url -%>
+    <span>http://</span> <%= f.text_field :twitter_url -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :facebook_url -%>
+    <span>http://</span> <%= f.text_field :facebook_url -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :photo -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :photo_id,
+               :image => @writer.photo,
+               :toggle_image_display => false -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.writers.admin.writers.writer'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @writer.name) -%>
+<% end -%>

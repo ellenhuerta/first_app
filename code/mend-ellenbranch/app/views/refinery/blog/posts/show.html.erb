@@ -1,0 +1,105 @@
+
+<style>
+ header {
+    background: url(<%=@post.image.url %>);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    top:0;
+    left: 0;
+    width: 100%;
+    
+  }
+</style>
+
+<div class="posts">
+
+<!-- HEADER IMAGE -->
+  <header class="blur">
+    <hgroup>
+      <h1><%= @post.title %></h1> 
+      <% if @post.source_url.present? %>
+      <div class='post blog_source'>
+        <%= "#{t('source', :scope => 'refinery.blog.posts.show')}: " %>
+        <%= link_to (@post.source_url_title.blank? ? @post.source_url : @post.source_url_title), @post.source_url %>
+          </div>
+      <% end %>
+    </hgroup> 
+  </header>
+
+  <!-- POST CONTENT -->
+  <div class="row">
+    <div class="large-12 columns blog_post">
+      <%= @post.body.html_safe %>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <%= render 'layouts/newsletter' %>
+
+  <!-- AUTHOR PANEL -->
+  <% if @post.writer.present? %>
+  <div class="post row panel">
+    <% if @post.writer.photo.present? %>
+    <div class="large-3 columns">
+      <img alt="" src="<%=@post.writer.photo.url%>"/>
+    </div>
+    <% end %>
+    <div class="post large-9 columns author-description">
+    <% if @post.writer.name.present? %>
+      <h3><%= @post.writer.name %></h3>
+    <% end %>
+    <% if @post.writer.name.present? %>
+      <p><%= @post.writer.bio %>
+    <% end %>
+    </div>
+    <div>
+    <% if @post.writer.web_url.present? %>
+      <a href="<%= "http://#{@post.writer.web_url}" %>">Web Page</a>
+    <% end %>
+    
+    <% if @post.writer.twitter_url.present? %>
+      <a href="<%= "http://#{@post.writer.twitter_url}" %>">Twitter</a>
+    <% end %>
+    
+    <% if @post.writer.facebook_url.present? %>
+      <a href="<%= "http://#{@post.writer.facebook_url}" %>">Facebook</a>
+    <% end %>
+    </div> 
+  </div>
+
+  <% end %>
+
+  <!-- RELATED POST -->
+  <div id="related-posts" class="row"  > 
+    <h1>Keep Mending</h1>
+    <ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1" data-equalizer>
+        <%= render :partial => "/refinery/blog/shared/posts", :collection => @posts, as: :post %>
+    </ul>
+  </div>
+
+  <!-- COMMENTS -->
+  <div class="comments row">
+    <div class="large-12 columns">
+      <%= render 'comments' %>
+    </div>
+  </div> 
+
+</div>
+<!-- SHARETHIS -->
+<% content_for :javascripts do %>
+  <%# enable AJAX'd post nav at your own risk until html5 history API implemented. %>
+  <%#= javascript_include_tag('refinery/blog/frontend') %>
+  <script src="http://w.sharethis.com/button/buttons.js"></script>
+  <script>stLight.options({publisher:'<%= Refinery::Blog.share_this_key %>'});</script>
+<% end if Refinery::Blog::Post::ShareThis.enabled? %>
+
+
+
+
+
+
+
+

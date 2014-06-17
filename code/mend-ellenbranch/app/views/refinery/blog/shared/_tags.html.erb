@@ -1,0 +1,8 @@
+<% if @tags.any? %>
+<button class="filter" data-filter=".<%= tag.name.downcase %>">
+	<%= tag.name.upcase.sub(/-/, " ") %>
+</button>
+<% end %>
+
+
+

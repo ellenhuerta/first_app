@@ -1,0 +1,42 @@
+<%= form_tag('/subscribe', method: "post", id: "subscribe", remote: "true",  'data-abide' =>"") do -%>
+  <div class="newsletter-wrap row">
+    <div class="large-12 columns">
+      <div id="on-the-mend" class="large-3 columns">
+        <h1>On The Mend</h1>
+      </div>
+      <div id="signup-message" class="large-5 columns">
+          <p>Comfort + inspiration delivered straight to your inbox in our free, weekly newsletter. Sign up!</p>
+      </div>
+      <div id ="newsletter-form-fields" class="large-4 columns">
+        <div class="row collapse">
+          <div class="email-field large-8 medium-8 small-12 columns">
+            <input id="email-input" name="email[address]" placeholder="Your Email Address"  type="email"  required>
+            <small class="error">Woops! Must be a valid email.</small>
+          </div>
+          <div  class="large-4 medium-4 small-12 columns">
+            <%= submit_tag("Subscribe",  :id => "newsletter-button", :class => "button postfix") %>
+          </div>
+          <div id="response"></div>
+        </div>  
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<!-- TRIGGER MODAL -->
+<a href="#" data-reveal-id="myModal"></a>
+
+<!-- MODAL -->
+<div id="myModal" class="reveal-modal" data-reveal>
+  <h2>Thank You</h2>
+  <p>
+    Thank you so much for subscribing to On The Mend. We send out a newsletter weekly, so be sure to check your inbox. 
+  </p>
+  <p> 
+    If you're a Gmail subscriber, sometimes our emails end up in the Promotions tab of your inbox. If you want our newsletters to show in your Primary tab, just drag and drop one of our newsletters and it will ask you if you'd like to apply that to all future emails too.
+  </p>
+  <p>
+    If you have any trouble finding our emails, please email support@letsmend.com.
+  </p>
+  <a class="close-reveal-modal">&#215;</a>
+</div>

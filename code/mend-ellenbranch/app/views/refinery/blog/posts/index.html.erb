@@ -1,0 +1,64 @@
+<% if @posts.any? %>
+  <!-- CAROUSEL -->
+  <div id="owl-demo" class="owl-carousel owl-theme"  data-equalizer> 
+    <%  @featured_posts.each do |post| %>
+      <% if post.image %>
+        <a href="<%=refinery.blog_post_path(post)%>">
+          <div class="item"  ><img src="<%=post.image.url%>" alt="Owl Image" data-equalizer-watch></div>
+          <div class="caption" > <%= post.title %></div>
+        </a>
+      <% end %>
+    <% end %>
+  </div>
+  <!-- NEWSLETTER -->
+  <div class="row">
+    <div class="large-12 columns">
+      <%= render 'layouts/newsletter' %>
+    </div>
+  </div>
+  <!-- MOOD QUESTION -->
+  <div class="row">
+    <div class="large-12 columns text-center" id="mood-question">
+      <h1>How are you feeling right now?</h1>
+    </div>
+  </div>
+  <!-- ALL POSTS -->
+  <div class="row">
+    <div class="large-12 columns">
+      <ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1 container" id="Container">
+        <div class="fail-message">
+          <span>No items were found matching the current filters.</span>
+        </div>
+        <div class="controls large-12 columns ">
+          <button class="filter" data-filter="all">All</button>
+          <%= render :partial => "/refinery/blog/shared/tags", :collection => @emotion_tags, as: :tag %>
+        </div> 
+        <%= render :partial => "/refinery/blog/shared/posts", :collection => @non_featured_posts, as: :post %>
+      </ul>
+    </div>
+  </div>
+  <!-- LOAD MORE BUTTON -->
+  <div class="row">
+    <div class="small-12 text-center">
+      <a type="button" class="load-more-btn button [radius round]" id="js-load-more-btn">load more</a>
+    </div>
+  </div>
+  
+  <%= will_paginate @non_featured_posts %>
+
+<% end %>
+
+<!-- DISQUS -->
+<!-- COMMENT COUNT -->
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'letsmend'; // required: replace example with your forum shortname
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function () {
+      var s = document.createElement('script'); s.async = true;
+      s.type = 'text/javascript';
+      s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  }());
+</script>

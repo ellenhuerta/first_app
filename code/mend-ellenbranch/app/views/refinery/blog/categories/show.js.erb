@@ -1,0 +1,12 @@
+
+$('#Container').append("<%= j render :partial => '/refinery/blog/shared/posts', :collection => @posts, as: :post %>");
+$('#Container .mix').css("display", "inline-block");
+
+<% if @posts.next_page %>
+	$('.pagination').replaceWith('<%= j will_paginate(@posts) %>');
+<% else %>
+	$('.pagination').remove();
+<% end %>
+
+<% sleep 1 %>
+

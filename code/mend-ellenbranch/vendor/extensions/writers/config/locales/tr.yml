@@ -1,0 +1,30 @@
+tr:
+  refinery:
+    plugins:
+      writers:
+        title: Writers
+    writers:
+      admin:
+        writers:
+          actions:
+            create_new: Yeni Ekle Writer
+            reorder: Tekrar sirala Writers
+            reorder_done: Tekrar siralama tamamlandiWriters
+          records:
+            title: Writers
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Writers yok henuz.  Tikla "Yeni Ekle Writer" eklemek senin ilk writer.
+          writer:
+            view_live_html: Bunu canlu writer goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle writer
+            delete: Bunu Sil writer sonsuza dek
+      writers:
+        show:
+          other: Diger Writers
+  activerecord:
+    attributes:
+      'refinery/writers/writer':
+        name: Name
+        bio: Bio
+        web_url: Web Url
+        photo: Photo

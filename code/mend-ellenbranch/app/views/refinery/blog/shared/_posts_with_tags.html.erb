@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="large-12 columns">
+    <ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1 container" id="Container">
+      <div class="fail-message">
+        <span>No items were found matching the current filters.</span>
+      </div>
+        <div class="controls large-12 columns ">
+          <button class="filter" data-filter="all">All</button>
+          <%= render :partial => "/refinery/blog/shared/tags", :collection => @tags, as: :tag %>
+        </div>  
+        
+        <%= render :partial => "/refinery/blog/shared/posts", :collection => @posts, as: :post %>
+    </ul>
+  </div>
+</div>
+  <div class="row">
+    <div class="small-12 text-center">
+      <button type="button" class="load-more-btn" id="js-load-more-btn">load more</button>
+    </div>
+  </div>
+
+<%= will_paginate @non_featuerd_posts %>
+  

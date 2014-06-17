@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Writers::Admin::WritersController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.writers_admin_writers_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_writers_admin_writer_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Writers::Admin::WritersController.sortable? && ::Refinery::Writers::Writer.many? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Writers"),
+                 refinery.writers_admin_writers_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Writers"),
+                 refinery.writers_admin_writers_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

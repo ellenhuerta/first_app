@@ -1,0 +1,13 @@
+/*---------------------- ////// ----------------------*/
+/*---------------------- mantra ----------------------*/
+.mantra { 
+  text-align: center; 
+
+}
+.mantra p { 
+  font-family: "Lato";
+  font-size: 24px;
+  margin-top: 0px;
+  color: #5A5E68;
+  background-color: #f7f7f7;
+}

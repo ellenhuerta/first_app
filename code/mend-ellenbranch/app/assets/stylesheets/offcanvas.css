@@ -1,0 +1,101 @@
+/*OFFCANVAS*/
+/*icon and nav bar*/
+
+/*
+}
+
+want to add: hover over text and it turns white. ;
+*/
+.off-canvas-wrap {
+  /*padding-bottom: 50px;*/
+
+}
+
+
+/* TAB BAR NAV AND TOGGLE */
+.right-off-canvas-toggle i {
+  color: #5A5E68;
+}
+
+nav.tab-bar {
+  background: #D7DDE0;
+  min-height: 60px;
+}
+
+
+a.right-off-canvas-toggle {
+  color: #5A5E68;
+}
+
+a.nav.section {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+a.right-off-canvas-toggle {
+  position: inline-block;
+  padding-top: 20px;
+}
+
+/* REFAULT DEFAULT BORDER */
+.right-small{
+  border: none;
+  box-shadow: none;
+  z-index: 100
+ }
+
+/* ASIDE MENU BAR */
+.right-off-canvas-menu {
+	background: #5A5E68;
+	font-family: "lato", sans-serif;
+	font-size: 18px;
+	text-transform: uppercase;
+	padding-left: 0px;
+}
+
+.off-canvas-list {
+	color: white;
+}
+
+.ul.off-canvas-list {
+ border: 0px;
+}
+
+a.off-canvas-list {
+	font-family: "lato", "sans-serif";
+}
+
+a.company.info {
+  font-size: 12px;
+  text-transform: none;
+}
+
+
+ /* CONNECT WITH US */
+ .aboutsocial {
+  padding-left: 30px;
+  font-size: 30px;
+}
+
+.aboutsocial a{
+  color:white;
+}
+
+.aboutsocial a:hover{
+  color: gray;
+  transition: darkgray 0.3s ease-in;
+}
+
+/* COPYRIGHT */
+
+.copyright {
+  font-size: 14px;
+  text-transform: none;
+  padding-left: 30px;
+  font-family: "lato";
+  color: #f7f7f7;
+  padding-top: 20px;
+}
+
+#no-posts {
+
+}
